@@ -8,12 +8,48 @@ import portfolio5 from "@/assets/portfolio-5.jpg";
 import portfolio6 from "@/assets/portfolio-6.jpg";
 
 const portfolioItems = [
-  { id: 1, image: portfolio1, title: "Neon Dreams", category: "Fashion" },
-  { id: 2, image: portfolio2, title: "Electric Soul", category: "Editorial" },
-  { id: 3, image: portfolio3, title: "Crimson Edge", category: "Portrait" },
-  { id: 4, image: portfolio4, title: "Dual Spectrum", category: "Fashion" },
-  { id: 5, image: portfolio5, title: "Cyan Halo", category: "Editorial" },
-  { id: 6, image: portfolio6, title: "Violet Hour", category: "Portrait" },
+  { 
+    id: 1, 
+    image: portfolio1, 
+    title: "MozLearn", 
+    category: "E-Learning",
+    description: "University club e-learning platform with authentication, course repository, and progress tracking."
+  },
+  { 
+    id: 2, 
+    image: portfolio2, 
+    title: "Anovia Suites", 
+    category: "Full-Stack",
+    description: "Hotel management system with Laravel REST API, React dashboard, and Flutter mobile app."
+  },
+  { 
+    id: 3, 
+    image: portfolio3, 
+    title: "Anteo", 
+    category: "Cybersecurity",
+    description: "Security simulation project with Figma UI, attack simulations, and Fail2Ban integration."
+  },
+  { 
+    id: 4, 
+    image: portfolio4, 
+    title: "gigIT", 
+    category: "Hackathon",
+    description: "Micro-business discovery and management app developed for a university hackathon."
+  },
+  { 
+    id: 5, 
+    image: portfolio5, 
+    title: "3achba", 
+    category: "Mobile App",
+    description: "Plant identification app with scanning, care advice, and maintenance tracking features."
+  },
+  { 
+    id: 6, 
+    image: portfolio6, 
+    title: "Delivro", 
+    category: "Mobile App",
+    description: "Restaurant delivery app for ordering and meal tracking with Flutter."
+  },
 ];
 
 const PortfolioItem = ({ item, index }: { item: typeof portfolioItems[0]; index: number }) => {
@@ -89,6 +125,16 @@ const PortfolioItem = ({ item, index }: { item: typeof portfolioItems[0]; index:
             {item.title}
           </motion.h3>
 
+          {/* Description */}
+          <motion.p
+            className="text-sm text-muted-foreground mt-2 font-inter"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : 20 }}
+            transition={{ duration: 0.3 }}
+          >
+            {item.description}
+          </motion.p>
+
           {/* View button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -143,7 +189,7 @@ const PortfolioSection = () => {
           <div className="inline-flex items-center gap-4 mb-6">
             <span className="w-12 h-[1px] bg-primary" />
             <span className="text-xs tracking-[0.3em] text-primary font-orbitron">
-              SELECTED.WORKS
+              SELECTED.PROJECTS
             </span>
             <span className="w-12 h-[1px] bg-primary" />
           </div>
@@ -152,8 +198,8 @@ const PortfolioSection = () => {
             <span className="text-glow-magenta">PORTFOLIO</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto font-inter">
-            A curated collection of neon-drenched portraits and editorial works 
-            from the cyberpunk frontier.
+            A collection of web and mobile applications built with modern 
+            technologies and creative problem-solving.
           </p>
         </motion.div>
 
@@ -171,9 +217,14 @@ const PortfolioSection = () => {
           transition={{ delay: 0.8 }}
           className="text-center mt-12"
         >
-          <button className="cyber-button rounded-lg">
-            View All Works
-          </button>
+          <a 
+            href="https://github.com/anfel-bouchetit" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="cyber-button rounded-lg inline-block"
+          >
+            View on GitHub
+          </a>
         </motion.div>
       </div>
     </section>

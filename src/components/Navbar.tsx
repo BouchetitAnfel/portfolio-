@@ -4,8 +4,8 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "#about", label: "About" },
-  { href: "#portfolio", label: "Portfolio" },
-  { href: "#services", label: "Services" },
+  { href: "#portfolio", label: "Projects" },
+  { href: "#services", label: "Skills" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -44,7 +44,7 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             className="text-2xl font-orbitron font-bold text-glow-magenta"
           >
-            NEXUS
+            ANFEL.B
           </motion.a>
 
           {/* Desktop nav */}
@@ -69,7 +69,7 @@ const Navbar = () => {
               transition={{ delay: 0.5 }}
               className="cyber-button rounded-lg text-sm py-2 px-4"
             >
-              BOOK NOW
+              HIRE ME
             </motion.a>
           </div>
 
@@ -107,7 +107,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className="block cyber-button rounded-lg text-sm py-2 px-4 text-center"
             >
-              BOOK NOW
+              HIRE ME
             </a>
           </div>
         </motion.div>

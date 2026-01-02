@@ -7,10 +7,10 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { value: "500+", label: "Projects" },
-    { value: "12", label: "Years" },
-    { value: "50+", label: "Awards" },
-    { value: "200+", label: "Clients" },
+    { value: "10+", label: "Projects" },
+    { value: "2+", label: "Years XP" },
+    { value: "2", label: "Internships" },
+    { value: "5+", label: "Tech Stacks" },
   ];
 
   return (
@@ -40,7 +40,7 @@ const AboutSection = () => {
               <div className="relative glass-card rounded-2xl overflow-hidden p-2">
                 <img
                   src={aboutPortrait}
-                  alt="About the photographer"
+                  alt="About Anfel Bouchetit"
                   className="w-full h-[500px] object-cover rounded-xl"
                 />
                 
@@ -51,8 +51,8 @@ const AboutSection = () => {
                   transition={{ delay: 0.5 }}
                   className="absolute -bottom-6 -right-6 glass-card neon-border rounded-xl p-6"
                 >
-                  <div className="text-4xl font-orbitron font-bold text-primary">10+</div>
-                  <div className="text-sm text-muted-foreground">Years in Neon</div>
+                  <div className="text-4xl font-orbitron font-bold text-primary">MSc</div>
+                  <div className="text-sm text-muted-foreground">In Progress</div>
                 </motion.div>
               </div>
             </div>
@@ -73,21 +73,21 @@ const AboutSection = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-orbitron font-bold mb-6">
-              <span className="text-glow-cyan">CRAFTING</span>
+              <span className="text-glow-cyan">BUILDING</span>
               <br />
-              <span className="text-foreground">DIGITAL DREAMS</span>
+              <span className="text-foreground">DIGITAL EXPERIENCES</span>
             </h2>
 
             <div className="space-y-4 text-muted-foreground font-inter leading-relaxed mb-10">
               <p>
-                Based in the neon-lit streets of Tokyo, I've spent over a decade 
-                perfecting the art of cyberpunk photography. My work lives at the 
-                intersection of fashion, technology, and raw human emotion.
+                Computer Science student at the University of Constantine 2 with experience 
+                in web and mobile development, including REST API design, full-stack 
+                integration, and UI/UX design.
               </p>
               <p>
-                Every frame I capture tells a story of futures yet to come—where 
-                humanity and technology dance in perfect chromatic harmony. I believe 
-                light is not just illumination; it's emotion, narrative, and soul.
+                Passionate about modern technologies, I dedicate my energy to creating 
+                elegant and efficient solutions. While technically rigorous, I also enjoy 
+                being creative in finding innovative approaches to complex problems.
               </p>
             </div>
 
@@ -117,7 +117,7 @@ const AboutSection = () => {
               transition={{ delay: 0.8 }}
             >
               <a href="#contact" className="cyber-button rounded-lg inline-flex items-center gap-2">
-                <span>Let's Create</span>
+                <span>Let's Collaborate</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

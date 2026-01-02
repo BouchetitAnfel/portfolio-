@@ -14,7 +14,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="text-2xl font-orbitron font-bold text-glow-magenta"
           >
-            NEXUS
+            ANFEL.B
           </motion.div>
 
           {/* Tagline */}
@@ -25,7 +25,7 @@ const Footer = () => {
             transition={{ delay: 0.2 }}
             className="text-center text-muted-foreground font-inter text-sm"
           >
-            "In the neon glow, we find our truth"
+            "Building elegant solutions with creative passion"
           </motion.p>
 
           {/* Copyright */}
@@ -36,7 +36,7 @@ const Footer = () => {
             transition={{ delay: 0.4 }}
             className="text-sm text-muted-foreground font-inter"
           >
-            © 2026 NEXUS Studio. All rights reserved.
+            © 2026 Anfel Bouchetit. All rights reserved.
           </motion.div>
         </div>
 
