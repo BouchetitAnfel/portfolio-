@@ -5,36 +5,35 @@ import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
 import portfolio4 from "@/assets/portfolio-4.jpg";
 import portfolio5 from "@/assets/portfolio-5.jpg";
-import portfolio6 from "@/assets/portfolio-6.jpg";
 
 const portfolioItems = [
   { 
     id: 1, 
     image: portfolio1, 
+    title: "Delivro", 
+    category: "Mobile App",
+    description: "Restaurant delivery app for ordering and meal tracking with Flutter."
+  },
+  { 
+    id: 2, 
+    image: portfolio2, 
     title: "MozLearn", 
     category: "E-Learning",
     description: "University club e-learning platform with authentication, course repository, and progress tracking."
   },
   { 
-    id: 2, 
-    image: portfolio2, 
+    id: 3, 
+    image: portfolio3, 
     title: "Anovia Suites", 
     category: "Full-Stack",
     description: "Hotel management system with Laravel REST API, React dashboard, and Flutter mobile app."
   },
   { 
-    id: 3, 
-    image: portfolio3, 
+    id: 4, 
+    image: portfolio4, 
     title: "Anteo", 
     category: "Cybersecurity",
     description: "Security simulation project with Figma UI, attack simulations, and Fail2Ban integration."
-  },
-  { 
-    id: 4, 
-    image: portfolio4, 
-    title: "gigIT", 
-    category: "Hackathon",
-    description: "Micro-business discovery and management app developed for a university hackathon."
   },
   { 
     id: 5, 
@@ -42,13 +41,6 @@ const portfolioItems = [
     title: "3achba", 
     category: "Mobile App",
     description: "Plant identification app with scanning, care advice, and maintenance tracking features."
-  },
-  { 
-    id: 6, 
-    image: portfolio6, 
-    title: "Delivro", 
-    category: "Mobile App",
-    description: "Restaurant delivery app for ordering and meal tracking with Flutter."
   },
 ];
 

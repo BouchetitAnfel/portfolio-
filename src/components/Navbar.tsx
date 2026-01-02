@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -17,7 +18,7 @@ const Navbar = () => {
   const navBackground = useTransform(
     scrollY,
     [0, 100],
-    ["rgba(10, 10, 15, 0)", "rgba(10, 10, 15, 0.9)"]
+    ["hsl(var(--background) / 0)", "hsl(var(--background) / 0.9)"]
   );
 
   useEffect(() => {
@@ -62,6 +63,7 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover:w-full" />
               </motion.a>
             ))}
+            <ThemeToggle />
             <motion.a
               href="#contact"
               initial={{ opacity: 0, y: -10 }}
@@ -102,13 +104,16 @@ const Navbar = () => {
                 {link.label.toUpperCase()}
               </a>
             ))}
-            <a
-              href="#contact"
-              onClick={() => setIsOpen(false)}
-              className="block cyber-button rounded-lg text-sm py-2 px-4 text-center"
-            >
-              HIRE ME
-            </a>
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+              <a
+                href="#contact"
+                onClick={() => setIsOpen(false)}
+                className="flex-1 cyber-button rounded-lg text-sm py-2 px-4 text-center"
+              >
+                HIRE ME
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>
