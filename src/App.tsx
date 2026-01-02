@@ -3,12 +3,23 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const App = () => {
+  useEffect(() => {
+    // Initialize theme on mount
+    const saved = localStorage.getItem("theme");
+    const prefersDark = saved === "dark" || (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    document.documentElement.classList.toggle("dark", prefersDark);
+    document.documentElement.classList.toggle("light", !prefersDark);
+    if (!saved) localStorage.setItem("theme", prefersDark ? "dark" : "light");
+  }, []);
+
+  return (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -21,7 +32,7 @@ const App = () => (
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
-  </QueryClientProvider>
-);
+  );
+};
 
 export default App;
