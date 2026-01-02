@@ -108,7 +108,7 @@ const HeroSection = () => {
             </motion.div>
 
             {/* Main title with letter animation */}
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-orbitron font-black leading-none mb-4">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-orbitron font-black leading-none mb-4">
               {titleText.split("").map((letter, index) => (
                 <motion.span
                   key={index}
@@ -183,7 +183,7 @@ const HeroSection = () => {
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/30 via-transparent to-secondary/30 rounded-2xl blur-xl" />
               
               {/* HUD frame corners */}
-              <div className="relative hud-corner rounded-2xl overflow-hidden neon-border">
+              <div className="relative hud-corner rounded-2xl overflow-hidden neon-border max-w-md mx-auto">
                 <img
                   src={heroPortrait}
                   alt="Anfel Bouchetit - Fullstack Developer"
