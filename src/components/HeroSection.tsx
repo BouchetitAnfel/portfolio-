@@ -23,8 +23,8 @@ const HeroSection = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [mouseX, mouseY]);
 
-  const titleText = "NEXUS";
-  const subtitleText = "PHOTOGRAPHY";
+  const titleText = "ANFEL";
+  const subtitleText = "BOUCHETIT";
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -103,7 +103,7 @@ const HeroSection = () => {
             >
               <span className="w-8 h-[1px] bg-primary" />
               <span className="text-xs tracking-[0.3em] text-primary font-orbitron">
-                CYBER.VISUAL.ARTIST
+                FULLSTACK.DEVELOPER
               </span>
             </motion.div>
 
@@ -149,8 +149,8 @@ const HeroSection = () => {
               transition={{ delay: 1.5 }}
               className="text-muted-foreground text-lg max-w-md mx-auto lg:mx-0 mb-10 font-inter"
             >
-              Capturing the electric essence of tomorrow through the lens of today. 
-              Neon dreams, cyberpunk realities.
+              Computer Science student crafting elegant web & mobile solutions. 
+              Passionate about modern tech, UI/UX, and creative problem-solving.
             </motion.p>
 
             <motion.div
@@ -160,10 +160,10 @@ const HeroSection = () => {
               className="flex flex-wrap gap-4 justify-center lg:justify-start"
             >
               <a href="#portfolio" className="cyber-button rounded-lg">
-                View Portfolio
+                View Projects
               </a>
               <a href="#contact" className="cyber-button rounded-lg neon-border-cyan">
-                Book a Session
+                Get in Touch
               </a>
             </motion.div>
           </motion.div>
@@ -186,7 +186,7 @@ const HeroSection = () => {
               <div className="relative hud-corner rounded-2xl overflow-hidden neon-border">
                 <img
                   src={heroPortrait}
-                  alt="Cyberpunk photographer portrait"
+                  alt="Anfel Bouchetit - Fullstack Developer"
                   className="w-full h-auto object-cover"
                 />
                 
@@ -202,7 +202,7 @@ const HeroSection = () => {
                     className="h-[1px] bg-gradient-to-r from-primary via-secondary to-transparent mb-4"
                   />
                   <div className="flex justify-between text-xs font-orbitron text-muted-foreground">
-                    <span>LOC: TOKYO.SECTOR.7</span>
+                    <span>LOC: CONSTANTINE.ALGERIA</span>
                     <span>SYS: ACTIVE</span>
                   </div>
                 </div>

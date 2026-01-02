@@ -1,13 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Instagram, Twitter, Youtube, Linkedin, Mail, MapPin, Phone } from "lucide-react";
-
-const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Youtube, href: "#", label: "YouTube" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-];
+import { Linkedin, Mail, MapPin, GraduationCap } from "lucide-react";
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -35,22 +28,23 @@ const ContactSection = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-orbitron font-bold mb-6">
-              <span className="text-glow-magenta">LET'S CREATE</span>
+              <span className="text-glow-magenta">LET'S BUILD</span>
               <br />
               <span className="text-foreground">SOMETHING</span>
               <br />
-              <span className="text-secondary">ELECTRIC</span>
+              <span className="text-secondary">AMAZING</span>
             </h2>
 
             <p className="text-muted-foreground mb-10 max-w-md font-inter">
-              Ready to bring your vision to life in neon? Let's collaborate on 
-              something extraordinary. Drop me a line and let's make magic happen.
+              Looking for an internship or collaboration opportunity? I'm always 
+              excited to work on innovative projects and learn new technologies. 
+              Let's connect!
             </p>
 
             {/* Contact details */}
             <div className="space-y-4 mb-10">
               <motion.a
-                href="mailto:hello@nexus.studio"
+                href="mailto:anfel.bouchetit@univ-constantine2.dz"
                 initial={{ opacity: 0, x: -20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.3 }}
@@ -61,7 +55,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <span className="text-xs text-muted-foreground font-orbitron">EMAIL</span>
-                  <p className="text-foreground">hello@nexus.studio</p>
+                  <p className="text-foreground">anfel.bouchetit@univ-constantine2.dz</p>
                 </div>
               </motion.a>
 
@@ -76,7 +70,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <span className="text-xs text-muted-foreground font-orbitron">LOCATION</span>
-                  <p className="text-foreground">Tokyo, Sector 7, Japan</p>
+                  <p className="text-foreground">Constantine, Algeria</p>
                 </div>
               </motion.div>
 
@@ -87,11 +81,11 @@ const ContactSection = () => {
                 className="flex items-center gap-4"
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-primary" />
+                  <GraduationCap className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <span className="text-xs text-muted-foreground font-orbitron">PHONE</span>
-                  <p className="text-foreground">+81 3 1234 5678</p>
+                  <span className="text-xs text-muted-foreground font-orbitron">EDUCATION</span>
+                  <p className="text-foreground">Master's in ICT - University of Constantine 2</p>
                 </div>
               </motion.div>
             </div>
@@ -103,95 +97,110 @@ const ContactSection = () => {
               transition={{ delay: 0.6 }}
             >
               <span className="text-xs text-muted-foreground font-orbitron mb-4 block">
-                FOLLOW.ME
+                CONNECT.WITH.ME
               </span>
               <div className="flex gap-4">
-                {socialLinks.map((social, index) => {
-                  const Icon = social.icon;
-                  return (
-                    <motion.a
-                      key={social.label}
-                      href={social.href}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={isInView ? { opacity: 1, y: 0 } : {}}
-                      transition={{ delay: 0.7 + index * 0.1 }}
-                      whileHover={{ y: -5, scale: 1.1 }}
-                      className="w-12 h-12 rounded-lg glass-card neon-border flex items-center justify-center hover:bg-primary/10 transition-colors"
-                      aria-label={social.label}
-                    >
-                      <Icon className="w-5 h-5" />
-                    </motion.a>
-                  );
-                })}
+                <motion.a
+                  href="https://www.linkedin.com/in/anfel-bouchetit-509a82342"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: 0.7 }}
+                  whileHover={{ y: -5, scale: 1.1 }}
+                  className="w-12 h-12 rounded-lg glass-card neon-border flex items-center justify-center hover:bg-primary/10 transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </motion.a>
+                <motion.a
+                  href="mailto:anfel.bouchetit@univ-constantine2.dz"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: 0.8 }}
+                  whileHover={{ y: -5, scale: 1.1 }}
+                  className="w-12 h-12 rounded-lg glass-card neon-border flex items-center justify-center hover:bg-primary/10 transition-colors"
+                  aria-label="Email"
+                >
+                  <Mail className="w-5 h-5" />
+                </motion.a>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Right side - Contact form */}
+          {/* Right side - Experience */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <form className="glass-card neon-border rounded-2xl p-8">
-              <div className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="text-xs font-orbitron text-muted-foreground mb-2 block">
-                      NAME
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full bg-muted/50 border border-border rounded-lg px-4 py-3 font-inter text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-xs font-orbitron text-muted-foreground mb-2 block">
-                      EMAIL
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full bg-muted/50 border border-border rounded-lg px-4 py-3 font-inter text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="text-xs font-orbitron text-muted-foreground mb-2 block">
-                    PROJECT TYPE
-                  </label>
-                  <select className="w-full bg-muted/50 border border-border rounded-lg px-4 py-3 font-inter text-foreground focus:outline-none focus:border-primary transition-colors">
-                    <option value="">Select a service</option>
-                    <option value="portrait">Portrait Session</option>
-                    <option value="editorial">Editorial Shoot</option>
-                    <option value="brand">Brand Campaign</option>
-                    <option value="video">Video Production</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="text-xs font-orbitron text-muted-foreground mb-2 block">
-                    MESSAGE
-                  </label>
-                  <textarea
-                    rows={5}
-                    className="w-full bg-muted/50 border border-border rounded-lg px-4 py-3 font-inter text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
-                    placeholder="Tell me about your project..."
-                  />
-                </div>
-
-                <motion.button
-                  type="submit"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full cyber-button rounded-lg text-center"
+            <div className="glass-card neon-border rounded-2xl p-8">
+              <h3 className="text-xl font-orbitron font-bold mb-8 text-glow-cyan">EXPERIENCE</h3>
+              
+              <div className="space-y-8">
+                {/* Experience 1 */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: 0.4 }}
+                  className="relative pl-6 border-l-2 border-primary/30"
                 >
-                  SEND MESSAGE
-                </motion.button>
+                  <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary/20 border-2 border-primary" />
+                  <span className="text-xs text-primary font-orbitron">NOV - DEC 2025</span>
+                  <h4 className="text-lg font-orbitron font-bold mt-1">Web Development Intern</h4>
+                  <p className="text-secondary text-sm">Dpointgroup • Barcelona, Spain</p>
+                  <p className="text-muted-foreground text-sm mt-2 font-inter">
+                    Engineered user-friendly web interfaces and integrated responsive design 
+                    principles to improve accessibility across multiple devices.
+                  </p>
+                </motion.div>
+
+                {/* Experience 2 */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: 0.5 }}
+                  className="relative pl-6 border-l-2 border-secondary/30"
+                >
+                  <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-secondary/20 border-2 border-secondary" />
+                  <span className="text-xs text-secondary font-orbitron">DEC 2025</span>
+                  <h4 className="text-lg font-orbitron font-bold mt-1">IT Intern</h4>
+                  <p className="text-primary text-sm">Algérie Télécom • Batna, Algeria</p>
+                  <p className="text-muted-foreground text-sm mt-2 font-inter">
+                    Learned troubleshooting of user hardware and software issues, 
+                    contributing to efficient resolution of technical challenges.
+                  </p>
+                </motion.div>
+
+                {/* Education */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: 0.6 }}
+                  className="relative pl-6 border-l-2 border-primary/30"
+                >
+                  <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary/20 border-2 border-primary" />
+                  <span className="text-xs text-primary font-orbitron">2025 - PRESENT</span>
+                  <h4 className="text-lg font-orbitron font-bold mt-1">Master's in ICT</h4>
+                  <p className="text-secondary text-sm">University of Constantine 2</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: 0.7 }}
+                  className="relative pl-6 border-l-2 border-secondary/30"
+                >
+                  <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-secondary/20 border-2 border-secondary" />
+                  <span className="text-xs text-secondary font-orbitron">2022 - 2025</span>
+                  <h4 className="text-lg font-orbitron font-bold mt-1">Bachelor's in Computer Science</h4>
+                  <p className="text-primary text-sm">University of Constantine 2</p>
+                  <p className="text-muted-foreground text-sm mt-1 font-inter">
+                    Minor in Information Technology
+                  </p>
+                </motion.div>
               </div>
-            </form>
+            </div>
           </motion.div>
         </div>
       </div>
